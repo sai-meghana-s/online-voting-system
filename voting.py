@@ -1,7 +1,6 @@
 import customtkinter as ctk
 from tkinter import messagebox
 
-# Candidate names and vote counts
 CANDIDATE1 = "A"
 CANDIDATE2 = "B"
 CANDIDATE3 = "C"
@@ -164,7 +163,6 @@ def openVotingWindow(username):
                       corner_radius=10, fg_color="#0078D7", hover_color="#005a9e",
                       command=lambda c=i: handleVote(c)).pack(pady=5)
 
-    # Extra Options
     ctk.CTkButton(voting_window, text="Show Vote Count", width=250, height=40,
                   fg_color="#6C757D", hover_color="#5A6268", command=votesCount).pack(pady=5)
 
@@ -177,12 +175,10 @@ def openVotingWindow(username):
     ctk.CTkButton(voting_window, text="Exit", width=250, height=40,
                   fg_color="#DC3545", hover_color="#C82333", command=root.quit).pack(pady=5)
 
-# Buttons
 ctk.CTkButton(root, text="Register", width=150, height=40, corner_radius=12,
               fg_color="#0078D7", hover_color="#005a9e", command=handleRegister).pack(pady=5)
 
 ctk.CTkButton(root, text="Login", width=150, height=40, corner_radius=12,
               fg_color="#28A745", hover_color="#218838", command=handleLogin).pack(pady=5)
 
-# Run UI
 root.mainloop()
