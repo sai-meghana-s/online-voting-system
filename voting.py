@@ -148,9 +148,6 @@ def openVotingWindow(username):
     voting_window = ctk.CTkToplevel(root)
     voting_window.geometry("800x1000")
     voting_window.title("Cast Your Vote")
-    voting_window.attributes('-topmost', True)
-    voting_window.lift()
-    voting_window.focus_force()
     
     ctk.CTkLabel(voting_window, text=f"Welcome, {username}!\nCast your vote or choose any one of the options below!", font=("Arial", 18)).pack(pady=10)
     
